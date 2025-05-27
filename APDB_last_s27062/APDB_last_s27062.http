@@ -1,0 +1,6 @@
+@APDB_last_s27062_HostAddress = http://localhost:5088
+
+GET {{APDB_last_s27062_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
