@@ -9,6 +9,8 @@ public class AppDbContext : DbContext
     public DbSet<Patient> Patients { get; set; }
     public DbSet<Medicament> Medicaments { get; set; }
     public DbSet<Doctor> Doctors { get; set; }
+    public DbSet<Prescription> Prescriptions { get; set; }
+    public DbSet<PrescriptionMedicament> PrescriptionMedicaments { get; set; }
 
     private static DateTime _date1 = new DateTime(2023, 1, 29);
     private static DateTime _date2 = new DateTime(2025, 10, 13);

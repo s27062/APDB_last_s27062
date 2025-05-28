@@ -1,4 +1,5 @@
 using APDB_last_s27062.Data;
+using APDB_last_s27062.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,8 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
+
+builder.Services.AddScoped<IDbService, DbService>();
 
 var app = builder.Build();
 
